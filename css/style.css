@@ -14,16 +14,18 @@ header .headerTop {
 header .searchLogo {
   float: right;
 }
-header .paretMenu::after {
-  content: url("/image/Path.png");
-  margin-left: 0.313rem;
-}
 
 .headerMenu {
   border-bottom: 1px solid #E9E9E9;
   position: sticky;
   top: 0;
   background: #fff;
+}
+.headerMenu .paretMenu .parentItem::after {
+  content: url("/image/Path.png");
+  margin-left: 0.313rem;
+  position: absolute;
+  bottom: 2px;
 }
 .headerMenu .menuList {
   display: flex;
@@ -35,6 +37,8 @@ header .paretMenu::after {
 .headerMenu .menuList a {
   color: #000;
   text-decoration: none;
+  position: relative;
+  margin-right: 10px;
 }
 .headerMenu .menuList li {
   height: 3.563rem;
@@ -53,7 +57,7 @@ header .paretMenu::after {
   z-index: 1;
   list-style: none;
   top: 3.563rem;
-  padding: 0 24px;
+  padding: 12px 24px 20px;
   border: 1px solid #E9E9E9;
 }
 .headerMenu .menuList .paretMenu .subMenu a {
@@ -61,8 +65,14 @@ header .paretMenu::after {
   color: #000;
   text-decoration: none;
 }
-.headerMenu .menuList .paretMenu .subMenu li {
+.headerMenu .menuList .paretMenu .subMenu li:hover a {
+  color: #969696;
+  padding-left: 8px;
+}
+.headerMenu .menuList .paretMenu .subMenu li:not(:last-child) {
   border-bottom: 1px solid #E9E9E9;
+  height: auto;
+  padding: 8px 0;
 }
 .headerMenu .menuList .paretMenu .subMenu li::after {
   content: url("/image/Path2.png");
@@ -85,6 +95,12 @@ header .paretMenu::after {
 }
 .posts .postItem {
   width: 360px;
+}
+.posts .postItem img {
+  width: 100%;
+}
+.posts .postItem a {
+  text-decoration: none;
 }
 .posts .postItem h3 {
   font-style: normal;
